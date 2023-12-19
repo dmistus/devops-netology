@@ -1,3 +1,90 @@
+Домашнее задание к занятию 2. «Применение принципов IaaC в работе с виртуальными машинами»
+
+Задача 1
+    • Опишите своими словами основные преимущества применения на практике IaaC паттернов.
+Непрерывная интеграция позволяет быстро находить ошибки в коде за счет постоянного тестирования небольшими объемами.
+Непрерывная доставка также позволяет легко исправить или откатиться на недавнее состояние в случае ошибок.
+    • Какой из принципов IaaC является основополагающим?
+Получение стабильного и предсказуемого результата каждый раз при использовании(запуске) кода.
+
+Задача 2
+
+    • Чем Ansible выгодно отличается от других систем управление конфигурациями?
+Его основные преимущества это использование SSH инфраструктуры без установки дополнительного 
+окружения, а также наличие большого количества модулей.
+    • Какой, на ваш взгляд, метод работы систем конфигурации более надёжный push или pull?
+Думаю тот, что лучше протестирован и проверен в каком-то конкретном окружении.
+Но в целом управление push мне кажется более надёжным. В этом случае одновременно получаем 
+нужные конфигурации на машинах в нужный момент времени.
+
+
+Задача 3
+
+$ virtualbox --help | awk '/Oracle/{ print $5 }'
+Selector
+
+$ virtualbox --help
+Oracle VM VirtualBox VM Selector v6.1.38_Ubuntu
+(C) 2005-2022 Oracle Corporation
+All rights reserved.
+
+No special options.
+
+If you are looking for --startvm and related options, you need to use VirtualBoxVM.
+
+
+$ vagrant --version
+Vagrant 2.2.6
+
+$ ansible --version
+ansible 2.9.6
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/dima/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 3.8.10 (default, Nov 22 2023, 10:22:35) [GCC 9.4.0]
+$
+
+Задача 4
+
+$ vagrant ssh
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-162-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue 19 Dec 2023 12:49:38 AM UTC
+
+  System load:  0.0                Users logged in:          0
+  Usage of /:   14.4% of 30.34GB   IPv4 address for docker0: 172.17.0.1
+  Memory usage: 32%                IPv4 address for eth0:    10.0.2.15
+  Swap usage:   0%                 IPv4 address for eth1:    192.168.56.11
+  Processes:    143
+
+
+This system is built by the Bento project by Chef Software
+More information can be found at https://github.com/chef/bento
+Last login: Tue Dec 19 00:20:53 2023 from 10.0.2.2
+
+
+vagrant@server1:~$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+vagrant@server1:~$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Домашнее задание к занятию 1. «Введение в виртуализацию. Типы и
 функции гипервизоров. Обзор рынка вендоров и областей применения»
 
